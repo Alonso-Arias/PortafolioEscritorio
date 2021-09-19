@@ -1,0 +1,24 @@
+﻿<Window x:Class="NoMasAccidentesv2.MainWindowRecovery"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NoMasAccidentesv2"
+        mc:Ignorable="d"
+        Title="Recovery" Height="600.289" Width="890.412">
+    <Grid Loaded="Grid_Loaded">
+        <Label Content="Ingresar Email:" HorizontalAlignment="Left" Margin="383,195,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="txtEmailRecovery" HorizontalAlignment="Left" Margin="300,234,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" FontSize="18"/>
+        <Button x:Name="btnNext" Content="Siguiente" HorizontalAlignment="Center" Margin="375,279,375.571,0" VerticalAlignment="Top" Height="32" Width="134" FontSize="16" Background="White" BorderBrush="#FF020101" Cursor="Hand"/>
+        <Image HorizontalAlignment="Left" Height="131" Margin="300,44,0,0" VerticalAlignment="Top" Width="300" Source="logo.png"/>
+        <Button x:Name="btnNext1" Content="Siguiente" HorizontalAlignment="Center" Margin="483,491,225.571,0" VerticalAlignment="Top" Height="32" Width="176" FontSize="16" Background="White" BorderBrush="#FF020101" Cursor="Hand" RenderTransformOrigin="1.283,2.131"/>
+        <RadioButton Content="Administrador" HorizontalAlignment="Left" Margin="673,248,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <RadioButton Content="Profesional" HorizontalAlignment="Left" Margin="673,288,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <RadioButton Content="Empresa" HorizontalAlignment="Left" Margin="673,327,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label Content="Indique su perfil" HorizontalAlignment="Left" Margin="673,195,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label Content="Revise su correo electrónico e ingrese abajo el código recibido" HorizontalAlignment="Left" Margin="57,347,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <TextBox x:Name="txtCode" HorizontalAlignment="Left" Margin="229,405,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="124" FontSize="18"/>
+        <Label Content="Ingrese el Codigo:" HorizontalAlignment="Left" Margin="71,397,0,0" VerticalAlignment="Top" FontSize="18"/>
+
+    </Grid>
+</Window>
