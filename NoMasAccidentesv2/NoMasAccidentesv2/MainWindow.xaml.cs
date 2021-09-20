@@ -30,26 +30,43 @@ namespace NoMasAccidentesv2
             conexion.Open();
         }
 
+        [Obsolete]
         OracleConnection conexion = new OracleConnection("DATA SOURCE=orcl; user id = ALONSO; password= alonso");
 
+        [Obsolete]
         private void btnIniciarSesion_Click(object sender, RoutedEventArgs e)
         {
-            
-            OracleCommand comando = new OracleCommand("SELECT * FROM CLIENTE WHERE CORREO= :email AND CONTRASEÑA = :contra", conexion);
+            // CLIENTE
+            OracleCommand cliente = new OracleCommand("SELECT * FROM CLIENTE WHERE CORREO= :email AND CONTRASEÑA = :contra", conexion);
 
-            comando.Parameters.AddWithValue(":email", txtEmail.Text);
-            comando.Parameters.AddWithValue(":contra", txtPassword.Password.ToString().Trim());
+            cliente.Parameters.AddWithValue(":email", txtEmail.Text);
+            cliente.Parameters.AddWithValue(":contra", txtPassword.Password.ToString().Trim());
 
 
-            OracleDataReader lector = comando.ExecuteReader();
+            OracleDataReader loginCliente = cliente.ExecuteReader();
 
-            if (lector.Read()) 
+            // EMPLEADO
+            OracleCommand empleado = new OracleCommand("SELECT * FROM EMPLEADO WHERE CORREO= :email AND CONTRASEÑA = :contra", conexion);
+
+            empleado.Parameters.AddWithValue(":email", txtEmail.Text);
+            empleado.Parameters.AddWithValue(":contra", txtPassword.Password.ToString().Trim());
+
+
+            OracleDataReader loginEmpleado = empleado.ExecuteReader();
+
+            if (loginCliente.Read()) 
             {
                 InicioCliente c = new InicioCliente();
                 Close();
                 c.ShowDialog();
             }
-            else
+            else if (loginEmpleado.Read())
+            {
+                InicioEmpleado c = new InicioEmpleado();
+                Close();
+                c.ShowDialog();
+
+            } else
             {
                 MessageBox.Show("Usuario Incorrecto");
             }

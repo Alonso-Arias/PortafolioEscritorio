@@ -16,9 +16,13 @@
         <Label Content="Mis Datos" HorizontalAlignment="Left" Margin="411,94,0,0" VerticalAlignment="Top" FontSize="20" Height="33" Width="102" RenderTransformOrigin="3.177,-1.105"/>
         <Label Content="Nombre:" HorizontalAlignment="Left" Margin="246,146,0,0" VerticalAlignment="Top" FontSize="18" Height="31" Width="79"/>
         <Label Content="Rut:" HorizontalAlignment="Left" Margin="285,182,0,0" VerticalAlignment="Top" FontSize="18" Height="30" Width="40" RenderTransformOrigin="0.22,0.537"/>
-        <Label Content="Direccion:" HorizontalAlignment="Left" Margin="234,212,0,0" VerticalAlignment="Top" FontSize="18" Height="31" Width="106" RenderTransformOrigin="1.076,0.35"/>
+        <Label Content="Direccion:" HorizontalAlignment="Left" Margin="234,212,0,0" VerticalAlignment="Top" FontSize="18" Height="31" Width="91" RenderTransformOrigin="1.076,0.35"/>
         <Button Content="Modificar Contraseña" HorizontalAlignment="Left" Margin="663,182,0,0" VerticalAlignment="Top" FontSize="18" RenderTransformOrigin="0.465,0.36" Height="34" Width="209" BorderBrush="Black" Background="White" Cursor="Hand"/>
         <Label Content="Correo:" HorizontalAlignment="Left" Margin="258,243,0,0" VerticalAlignment="Top" FontSize="18" Height="31" Width="67" RenderTransformOrigin="1.076,0.35"/>
-        <Button x:Name="btnVentanaReportes_Copy" Content="Capacitaciones" HorizontalAlignment="Left" Margin="854,28,-23.857,0" VerticalAlignment="Top" FontSize="18" RenderTransformOrigin="0.465,0.36" Height="34" Width="167" BorderBrush="Black" Background="White" Cursor="Hand" BorderThickness="1,0,0,0"/>
+        <Button x:Name="btnChat" Content="Chat" HorizontalAlignment="Left" Margin="854,28,-23.857,0" VerticalAlignment="Top" FontSize="18" RenderTransformOrigin="0.465,0.36" Height="34" Width="167" BorderBrush="Black" Background="White" Cursor="Hand" BorderThickness="1,0,0,0"/>
+        <Label Name="lblName" Content="{Binding Name}" HorizontalAlignment="Left" Margin="330,146,0,0" VerticalAlignment="Top" FontSize="18" Height="31" Width="138"/>
+        <Label Name="lblRut" Content="{Binding Name}" HorizontalAlignment="Left" Margin="330,182,0,0" VerticalAlignment="Top" FontSize="18" Height="30" Width="138" RenderTransformOrigin="0.22,0.537"/>
+        <Label Name="lblAddress" Content="{Binding Name}" HorizontalAlignment="Left" Margin="330,212,0,0" VerticalAlignment="Top" FontSize="18" Height="31" Width="138" RenderTransformOrigin="1.076,0.35"/>
+        <Label Name="lblEmail" Content="{Binding Name}" HorizontalAlignment="Left" Margin="330,243,0,0" VerticalAlignment="Top" FontSize="18" Height="31" Width="143" RenderTransformOrigin="1.076,0.35"/>
     </Grid>
 </Window>
