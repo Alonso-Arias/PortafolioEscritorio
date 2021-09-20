@@ -31,5 +31,11 @@ namespace NoMasAccidentesv2
            
         }
 
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow c = new MainWindow();
+            Close();
+            c.ShowDialog();
+        }
     }
 }
